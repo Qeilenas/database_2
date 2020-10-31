@@ -48,11 +48,12 @@ async function checkAuth(req) {
     throw new Error('Token not found')
   }
 
-  try {
+  /*try {
     return jwt.verify(token, secret)
   } catch (err) {
     throw err
-  }
+  }*/
+  return jwt.verify(token, secret)
 }
 
 // Все заказы конкретного пользователя
